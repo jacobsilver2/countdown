@@ -1,0 +1,63 @@
+.subscribe {
+  grid-area: subscribe;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: [input] 4fr [button] 1fr;
+}
+
+.subscribe-email {
+  grid-area: input;
+  border-radius: 4px;
+  height: 40px;
+  background-color: #000013;
+  border: 1px solid #fffffa;
+  color: #fffffa;
+  padding-left: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.2s ease-in;
+}
+
+.subscribe-email::placeholder {
+  color: #fffffa;
+  font-size: 16px;
+}
+
+.subscribe-email:focus,
+:hover {
+  border-color: #4cedc4;
+}
+
+.subscribe-button {
+  grid-area: button;
+  height: 40px;
+  background-color: #4cedc4;
+  border: 1px solid #000013;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.subscribe-button:hover {
+  filter: brightness(85%);
+}
+
+.subscribe-button:focus {
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .subscribe {
+    grid-template-areas:
+      "input"
+      "button";
+  }
+  .subscribe-email,
+  .subscribe-button {
+    width: 250px;
+    grid-column: 1 / -1;
+  }
+}

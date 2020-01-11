@@ -1,0 +1,42 @@
+.countdown {
+  grid-area: countdown;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 150px));
+  grid-gap: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.countdown div:not(:last-child) {
+  border-right: 2px solid #4cedc4;
+}
+
+.countdown-segment {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.countdown-segment-number {
+  font-size: 30px;
+  font-weight: 700;
+  transition: all 0.2s ease-in;
+}
+
+.countdown-segment-number:hover {
+  transform: scale(1.2);
+}
+
+.countdown-segment-caption {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .countdown {
+    border-bottom: 5px solid #4cedc4;
+  }
+  .countdown div:not(:last-child) {
+    border-right: 0px;
+  }
+}

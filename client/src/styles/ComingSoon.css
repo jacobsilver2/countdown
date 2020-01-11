@@ -1,0 +1,16 @@
+.background {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px auto 50px auto 100px auto;
+  grid-template-areas:
+    "countdown"
+    "logo"
+    "title"
+    "description"
+    "subscribe"
+    "social";
+  justify-items: center;
+  align-items: center;
+  color: #fffffa;
+}

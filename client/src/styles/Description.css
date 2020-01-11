@@ -1,0 +1,13 @@
+.description {
+  grid-area: description;
+  display: grid;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 700px;
+  grid-template-columns: 1fr;
+}
+
+.description-text {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+}
